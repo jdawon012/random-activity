@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap');
+
+:root {
+  color: #292343;
+  background: #fff8f1;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(255, 205, 153, 0.32), transparent 27rem),
+    radial-gradient(circle at 90% 85%, rgba(166, 227, 213, 0.35), transparent 25rem),
+    #fff8f1;
+}
+
+button {
+  font: inherit;
+}
+
+.app-shell {
+  width: min(100% - 40px, 720px);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 96px 0 40px;
+}
+
+.hero {
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 18px;
+  color: #d33f78;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.eyebrow::before,
+.eyebrow::after {
+  width: 24px;
+  height: 1px;
+  background: #e25e91;
+  content: '';
+}
+
+h1 {
+  margin: 0;
+  color: #292343;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3.5rem, 12vw, 6.5rem);
+  line-height: 0.98;
+  letter-spacing: -0.07em;
+}
+
+.intro {
+  margin: 24px 0 0;
+  color: #736e80;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.recommendation-card {
+  position: relative;
+  width: min(100%, 540px);
+  margin: 56px auto 0;
+  padding: 38px 38px 32px;
+  overflow: hidden;
+  border: 1px solid rgba(41, 35, 67, 0.12);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 24px 60px rgba(71, 57, 62, 0.11);
+}
+
+.recommendation-card::before {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 7px;
+  background: linear-gradient(90deg, #d43f78, #ffae64);
+  content: '';
+}
+
+.card-label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #d33f78;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.label-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #d33f78;
+}
+
+.result-area {
+  min-height: 166px;
+  padding: 35px 0 28px;
+  text-align: center;
+}
+
+.result-placeholder,
+.result-title {
+  margin: 0;
+  color: #292343;
+  font-size: clamp(1.7rem, 5vw, 2.45rem);
+  font-weight: 800;
+  letter-spacing: -0.06em;
+}
+
+.result-description {
+  margin: 16px auto 0;
+  color: #736e80;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.result-title {
+  animation: reveal 360ms ease both;
+}
+
+.recommend-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 16px 24px;
+  border: 0;
+  border-radius: 999px;
+  color: #fff;
+  background: #292343;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 800;
+  transition: transform 180ms ease, background 180ms ease, box-shadow 180ms ease;
+}
+
+.recommend-button:hover {
+  background: #d33f78;
+  box-shadow: 0 10px 22px rgba(211, 63, 120, 0.24);
+  transform: translateY(-2px);
+}
+
+.recommend-button:active {
+  transform: translateY(0);
+}
+
+.recommend-button:focus-visible {
+  outline: 4px solid rgba(211, 63, 120, 0.24);
+  outline-offset: 3px;
+}
+
+.footer-note {
+  margin: 28px 0 0;
+  color: #9992a0;
+  font-size: 12px;
+  text-align: center;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 560px) {
+  .app-shell {
+    width: min(100% - 28px, 720px);
+    padding-top: 72px;
+  }
+
+  .eyebrow {
+    font-size: 11px;
+  }
+
+  .recommendation-card {
+    margin-top: 44px;
+    padding: 32px 22px 24px;
+    border-radius: 23px;
+  }
+
+  .result-area {
+    min-height: 150px;
+    padding: 30px 0 22px;
+  }
+}

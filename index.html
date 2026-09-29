@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>오늘 뭐 하지?</title>
+    <meta name="description" content="고민될 때 버튼 하나로 오늘 할 활동을 추천받아 보세요." />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="오늘 뭐 하지?" />
+    <meta property="og:description" content="버튼 하나로 오늘 할 활동을 랜덤 추천받아 보세요." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="오늘 뭐 하지?" />
+    <meta name="twitter:description" content="버튼 하나로 오늘 할 활동을 랜덤 추천받아 보세요." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero" aria-labelledby="app-title">
+        <p class="eyebrow">A tiny nudge for today</p>
+        <h1 id="app-title">오늘 뭐 하지?</h1>
+        <p class="intro">고민은 잠깐 내려두고,<br />버튼 하나로 오늘의 활동을 골라보세요.</p>
+      </section>
+
+      <section class="recommendation-card" aria-labelledby="result-title">
+        <div class="card-label">
+          <span class="label-dot" aria-hidden="true"></span>
+          오늘의 추천
+        </div>
+        <div class="result-area" aria-live="polite">
+          <p class="result-placeholder" id="result-title">아직 추천받지 않았어요</p>
+          <p class="result-description" id="result-description">아래 버튼을 눌러 활동을 추천받아 보세요.</p>
+        </div>
+        <button class="recommend-button" id="recommend-button" type="button">
+          <span aria-hidden="true">✦</span>
+          추천받기
+        </button>
+      </section>
+
+      <p class="footer-note">작은 선택이 오늘을 조금 더 즐겁게 만들어요.</p>
+    </main>
+
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
