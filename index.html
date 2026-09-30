@@ -28,6 +28,47 @@
           <span class="label-dot" aria-hidden="true"></span>
           오늘의 추천
         </div>
+        <div class="filters" aria-label="활동 조건 선택">
+          <fieldset class="filter-group">
+            <legend>인원</legend>
+            <div class="filter-options">
+              <label class="filter-option">
+                <input type="radio" name="people" value="solo" />
+                <span>혼자</span>
+              </label>
+              <label class="filter-option">
+                <input type="radio" name="people" value="friends" />
+                <span>친구와</span>
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="filter-group">
+            <legend>장소</legend>
+            <div class="filter-options">
+              <label class="filter-option">
+                <input type="radio" name="place" value="indoor" />
+                <span>실내</span>
+              </label>
+              <label class="filter-option">
+                <input type="radio" name="place" value="outdoor" />
+                <span>실외</span>
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="filter-group">
+            <legend>비용</legend>
+            <div class="filter-options">
+              <label class="filter-option">
+                <input type="radio" name="cost" value="free" />
+                <span>무료</span>
+              </label>
+              <label class="filter-option">
+                <input type="radio" name="cost" value="paid" />
+                <span>유료</span>
+              </label>
+            </div>
+          </fieldset>
+        </div>
         <div class="result-area" aria-live="polite">
           <p class="result-placeholder" id="result-title">아직 추천받지 않았어요</p>
           <p class="result-description" id="result-description">아래 버튼을 눌러 활동을 추천받아 보세요.</p>

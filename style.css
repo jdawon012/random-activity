@@ -102,6 +102,74 @@ h1 {
   letter-spacing: 0.08em;
 }
 
+.filters {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.filter-group {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.filter-group legend {
+  margin-bottom: 9px;
+  color: #736e80;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.filter-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5px;
+}
+
+.filter-option {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+.filter-option input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.filter-option span {
+  display: block;
+  padding: 10px 5px;
+  border: 1px solid rgba(41, 35, 67, 0.13);
+  border-radius: 10px;
+  color: #736e80;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  transition: border-color 180ms ease, color 180ms ease, background 180ms ease;
+}
+
+.filter-option:hover span {
+  border-color: rgba(211, 63, 120, 0.5);
+  color: #d33f78;
+}
+
+.filter-option input:checked + span {
+  border-color: #d33f78;
+  color: #d33f78;
+  background: rgba(211, 63, 120, 0.08);
+}
+
+.filter-option input:focus-visible + span {
+  outline: 3px solid rgba(211, 63, 120, 0.24);
+  outline-offset: 2px;
+}
+
 .label-dot {
   width: 8px;
   height: 8px;
@@ -133,6 +201,11 @@ h1 {
 
 .result-title {
   animation: reveal 360ms ease both;
+}
+
+.result-title-empty {
+  color: #d33f78;
+  font-size: clamp(1.45rem, 5vw, 2.1rem);
 }
 
 .recommend-button {
@@ -199,6 +272,20 @@ h1 {
     margin-top: 44px;
     padding: 32px 22px 24px;
     border-radius: 23px;
+  }
+
+  .filters {
+    gap: 8px;
+    margin-top: 26px;
+  }
+
+  .filter-group legend {
+    font-size: 11px;
+  }
+
+  .filter-option span {
+    padding: 9px 3px;
+    font-size: 11px;
   }
 
   .result-area {
